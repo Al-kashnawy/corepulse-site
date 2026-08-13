@@ -697,19 +697,19 @@
         </div>
         <div class="task-arrow">→</div>
       </a>
-      <a class="task-card" data-task="twitter" href="https://x.com/CorePulsedao" target="_blank" rel="noopener" onclick="markTaskDone('twitter')">
+      <a class="task-card" data-task="twitter" href="https://x.com/realcorepluse" target="_blank" rel="noopener" onclick="markTaskDone('twitter')">
         <div class="task-check">✓</div>
         <div class="task-info">
           <div class="task-title" data-i18n="task2_title">Follow us on X</div>
-          <div class="task-sub" data-i18n="task2_sub">x.com/CorePulsedao</div>
+          <div class="task-sub" data-i18n="task2_sub">x.com/realcorepluse</div>
         </div>
         <div class="task-arrow">→</div>
       </a>
-      <a class="task-card" data-task="retweet" href="https://x.com/CorePulsedao/status/2087123325390668040?s=20" target="_blank" rel="noopener" onclick="markTaskDone('retweet')">
+      <a class="task-card" data-task="retweet" href="https://x.com/i/status/2087675428987130020" target="_blank" rel="noopener" onclick="markTaskDone('retweet')">
         <div class="task-check">✓</div>
         <div class="task-info">
           <div class="task-title" data-i18n="task3_title">Repost our pinned announcement</div>
-          <div class="task-sub" data-i18n="task3_sub">x.com/CorePulsedao</div>
+          <div class="task-sub" data-i18n="task3_sub">x.com/i/status/2087675428987130020</div>
         </div>
         <div class="task-arrow">→</div>
       </a>
@@ -724,10 +724,6 @@
       <div class="airdrop-note" data-i18n="airdrop_note">
         Completing all tasks does not guarantee an airdrop allocation. Submissions are reviewed manually to filter bots and duplicate entries. Final distribution, timing, and eligibility are at the discretion of the CorePulse team and will be confirmed via our official Telegram channel. Never share your private key or seed phrase — we will never ask for it.
       </div>
-      <a class="btn btn-telegram" id="notifyTelegramBtn" href="https://t.me/CorePulseOfficial" target="_blank" rel="noopener" style="margin-top:16px; display:none;">
-        <svg viewBox="0 0 240 240" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M120 0C53.7 0 0 53.7 0 120s53.7 120 120 120 120-53.7 120-120S186.3 0 120 0zm55.8 82.1-19.6 92.4c-1.5 6.6-5.4 8.2-10.9 5.1l-30.2-22.3-14.6 14c-1.6 1.6-3 3-6.1 3l2.2-30.9 56.3-50.9c2.4-2.2-.5-3.4-3.8-1.2l-69.6 43.8-30-9.4c-6.5-2-6.6-6.5 1.4-9.6l117.3-45.2c5.4-2 10.1 1.3 8.3 9.2z"/></svg>
-        <span data-i18n="airdrop_notify_btn">Notify us on Telegram after submitting</span>
-      </a>
     </div>
   </section>
 
@@ -854,7 +850,7 @@
   <footer>
     <div class="brand"><img class="logo-auto" alt="CorePulse logo"> CorePulse</div>
     <div class="footer-links">
-      <a href="https://x.com/CorePulsedao" target="_blank" rel="noopener">
+      <a href="https://x.com/realcorepluse" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-7l-5.5-7.2L4.5 22H1.3l8.1-9.3L1 2h7.2l5 6.6L18.9 2zm-1.2 18h1.7L7.4 4H5.6l12.1 16z"/></svg>
         <span>X</span>
       </a>
@@ -920,14 +916,11 @@
     if (progressFillEl) progressFillEl.style.width = Math.round((done/total)*100) + '%';
 
     const form = document.getElementById('airdropForm');
-    const notifyBtn = document.getElementById('notifyTelegramBtn');
     if (form) {
       if (done >= total) {
         form.classList.remove('locked');
-        if (notifyBtn) notifyBtn.style.display = 'inline-flex';
       } else {
         form.classList.add('locked');
-        if (notifyBtn) notifyBtn.style.display = 'none';
       }
     }
   }
@@ -953,13 +946,12 @@
       tge_date:"Exact date & time to be announced via our official Telegram channel.",
       airdrop_label:"Airdrop", airdrop_heading:"Complete tasks. Earn your share of the pulse.",
       airdrop_progress_suffix:"tasks completed",
-      task1_title:"Join our Telegram", task2_title:"Follow us on X", task2_sub:"x.com/CorePulsedao",
-      task3_title:"Repost our pinned announcement", task3_sub:"x.com/CorePulsedao",
+      task1_title:"Join our Telegram", task2_title:"Follow us on X", task2_sub:"x.com/realcorepluse",
+      task3_title:"Repost our pinned announcement", task3_sub:"x.com/i/status/2087675428987130020",
       task4_title:"Join our Discord", task4_sub:"Add your Discord invite link",
       task5_title:"Invite 2 friends to the community", task5_sub:"Share the Telegram link and tag them",
       airdrop_form_label:"Submit Your Wallet", airdrop_placeholder:"Your Core wallet address (0x...)",
       airdrop_locked_btn:"Complete all tasks to unlock", airdrop_unlocked_btn:"Submit for Airdrop",
-      airdrop_notify_btn:"Notify us on Telegram after submitting",
       airdrop_note:"Completing all tasks does not guarantee an airdrop allocation. Submissions are reviewed manually to filter bots and duplicate entries. Final distribution, timing, and eligibility are at the discretion of the CorePulse team and will be confirmed via our official Telegram channel. Never share your private key or seed phrase — we will never ask for it.",
       airdrop_success:"✓ Submitted! We'll confirm your entry in Telegram.",
       about_label:"About", about_heading:"A community-first pulse for the Core ecosystem.",
@@ -994,13 +986,12 @@
       tge_date:"سيتم الإعلان عن التاريخ والوقت الدقيقين عبر قناة تيليجرام الرسمية.",
       airdrop_label:"الإيردروب", airdrop_heading:"أكمل المهام. احصل على نصيبك من النبض.",
       airdrop_progress_suffix:"مهام مكتملة",
-      task1_title:"انضم إلى تيليجرام", task2_title:"تابعنا على X", task2_sub:"x.com/CorePulsedao",
-      task3_title:"أعد نشر إعلاننا المثبت", task3_sub:"x.com/CorePulsedao",
+      task1_title:"انضم إلى تيليجرام", task2_title:"تابعنا على X", task2_sub:"x.com/realcorepluse",
+      task3_title:"أعد نشر إعلاننا المثبت", task3_sub:"x.com/i/status/2087675428987130020",
       task4_title:"انضم إلى ديسكورد", task4_sub:"أضف رابط دعوة ديسكورد",
       task5_title:"دعوة صديقين للانضمام إلى المجتمع", task5_sub:"شارك رابط تيليجرام واذكرهم",
       airdrop_form_label:"أرسل محفظتك", airdrop_placeholder:"عنوان محفظتك على Core (0x...)",
       airdrop_locked_btn:"أكمل جميع المهام لفتح النموذج", airdrop_unlocked_btn:"إرسال للحصول على الإيردروب",
-      airdrop_notify_btn:"أعلمنا على تيليجرام بعد الإرسال",
       airdrop_note:"إكمال جميع المهام لا يضمن الحصول على تخصيص من الإيردروب. تتم مراجعة الطلبات يدويًا لاستبعاد الحسابات الآلية والمكررة. يعود القرار النهائي بشأن التوزيع والتوقيت والأهلية إلى فريق CorePulse، وسيتم تأكيده عبر قناتنا الرسمية على تيليجرام. لا تشارك مفتاحك الخاص أو عبارة الاسترداد أبدًا — لن نطلبها منك مطلقًا.",
       airdrop_success:"✓ تم الإرسال! سنؤكد مشاركتك على تيليجرام.",
       about_label:"نبذة", about_heading:"نبض يضع المجتمع في المقدمة لمنظومة Core.",
@@ -1035,13 +1026,12 @@
       tge_date:"具体日期与时间将通过官方 Telegram 频道公布。",
       airdrop_label:"空投", airdrop_heading:"完成任务，赢取属于你的脉动份额。",
       airdrop_progress_suffix:"项任务已完成",
-      task1_title:"加入我们的 Telegram", task2_title:"关注我们的 X 账号", task2_sub:"x.com/CorePulsedao",
-      task3_title:"转发我们置顶的公告", task3_sub:"x.com/CorePulsedao",
+      task1_title:"加入我们的 Telegram", task2_title:"关注我们的 X 账号", task2_sub:"x.com/realcorepluse",
+      task3_title:"转发我们置顶的公告", task3_sub:"x.com/i/status/2087675428987130020",
       task4_title:"加入我们的 Discord", task4_sub:"添加你的 Discord 邀请链接",
       task5_title:"邀请 2 位好友加入社区", task5_sub:"分享 Telegram 链接并@他们",
       airdrop_form_label:"提交你的钱包地址", airdrop_placeholder:"你的 Core 钱包地址 (0x...)",
       airdrop_locked_btn:"完成所有任务以解锁", airdrop_unlocked_btn:"提交参与空投",
-      airdrop_notify_btn:"提交后请在 Telegram 上通知我们",
       airdrop_note:"完成所有任务并不保证获得空投份额。所有提交将经过人工审核，以过滤机器人和重复提交。最终的分配方式、时间及资格由 CorePulse 团队决定，并将通过官方 Telegram 频道确认。切勿分享你的私钥或助记词——我们绝不会向你索要这些信息。",
       airdrop_success:"✓ 提交成功！我们将在 Telegram 上确认你的参与。",
       about_label:"关于", about_heading:"以社区为先，驱动 Core 生态的脉动。",
@@ -1076,13 +1066,12 @@
       tge_date:"Точная дата и время будут объявлены в нашем официальном Telegram-канале.",
       airdrop_label:"Аирдроп", airdrop_heading:"Выполняй задания. Получай свою долю пульса.",
       airdrop_progress_suffix:"заданий выполнено",
-      task1_title:"Присоединиться к Telegram", task2_title:"Подписаться на нас в X", task2_sub:"x.com/CorePulsedao",
-      task3_title:"Репостнуть закреплённый пост", task3_sub:"x.com/CorePulsedao",
+      task1_title:"Присоединиться к Telegram", task2_title:"Подписаться на нас в X", task2_sub:"x.com/realcorepluse",
+      task3_title:"Репостнуть закреплённый пост", task3_sub:"x.com/i/status/2087675428987130020",
       task4_title:"Присоединиться к Discord", task4_sub:"Добавьте ссылку-приглашение в Discord",
       task5_title:"Пригласить 2 друзей в сообщество", task5_sub:"Поделитесь ссылкой на Telegram и отметьте их",
       airdrop_form_label:"Отправьте свой кошелёк", airdrop_placeholder:"Адрес вашего кошелька Core (0x...)",
       airdrop_locked_btn:"Выполните все задания, чтобы разблокировать", airdrop_unlocked_btn:"Отправить на аирдроп",
-      airdrop_notify_btn:"Сообщите нам в Telegram после отправки",
       airdrop_note:"Выполнение всех заданий не гарантирует получение аирдропа. Заявки проверяются вручную для отсева ботов и дублей. Итоговое распределение, сроки и право на участие определяются командой CorePulse и будут подтверждены в официальном Telegram-канале. Никогда не сообщайте приватный ключ или seed-фразу — мы никогда их не запросим.",
       airdrop_success:"✓ Отправлено! Мы подтвердим вашу заявку в Telegram.",
       about_label:"О проекте", about_heading:"Пульс, ориентированный на сообщество Core.",
